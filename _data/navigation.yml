@@ -24,7 +24,7 @@ en:
      submenu: true
      tree:
        optin-rbf:
-         title: "Optin RBF"
+         title: "Opt-in RBF"
          url: "/en/faq/optin_rbf"
   dev:
     title: "Development"
