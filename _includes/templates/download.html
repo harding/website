@@ -1,6 +1,6 @@
 {% capture /dev/null %}<!-- suppress render of this part -->
 <!-- Copyright 2013 - 2016 The Bitcoin.org Project.
-     Copyright 2017 - 2018 The BitcoinCore.org Project
+     Copyright 2017 - 2020 The BitcoinCore.org Project
      This file is licensed under the MIT License (MIT) available on
      http://opensource.org/licenses/MIT. -->
 {% assign VERSION_SORTED_RELEASES = site.releases | sort: 'release' | reverse %}
@@ -42,8 +42,7 @@
         <img src="/assets/images/os/med_linux.png" alt="linux">
         <span>
           <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ site.data.binaries.lin64 }}" id="downloadlin">Linux (tgz)</a>
-          <span><a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ site.data.binaries.lin64 }}" class="dl" id="lin64">64 bit</a> -
-            <a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ site.data.binaries.lin32 }}" class="dl" id="lin32">32 bit</a></span>
+          <span><a href="{{ PATH_PREFIX }}/{{ FILE_PREFIX }}-{{ site.data.binaries.lin64 }}" class="dl" id="lin64">64 bit</a></span>
         </span>
       </div>
     </div>
@@ -265,7 +264,6 @@ var hrefwin64zip = document.getElementById('win64zip').href;
 var hrefmacdmg = document.getElementById('macdmg').href;
 var hrefmactar = document.getElementById('mactar').href;
 var hreflin64 = document.getElementById('lin64').href;
-var hreflin32 = document.getElementById('lin32').href;
 switch (os) {
 case 'windows64':
 	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_windows.svg';
@@ -277,11 +275,6 @@ case 'linux64':
 	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_linux.png';
 	but.href = hreflin64;
 	linklin.href = hreflin64;
-break;
-case 'linux32':
-	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_linux.png';
-	but.href = hreflin32;
-	linklin.href = hreflin32;
 break;
 case 'mac':
 	but.getElementsByTagName('IMG')[0].src = '/assets/images/os/but_mac.svg';
